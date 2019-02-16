@@ -1,0 +1,146 @@
+/* [UNIVERSAL] */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+html, body, input, textarea{
+  font-family: Geneva, sans-serif;
+	font-size: 16px;
+}
+h1, h2, h3, h4{
+  margin: 5px 0;
+}
+
+/* [NOW LOADING] */
+#page-loader, #page-loader-spin {
+	position: fixed;
+	display: block;
+	transition: all 0.3s linear;
+}
+#page-loader {
+	top:0;
+  left:0;
+	height: 100%;
+  width: 100%;
+	visibility: hidden;
+	z-index: 9999;
+	background: none;
+	opacity: 0.8;
+}
+#page-loader.active {
+	visibility: visible;
+	background: #000;
+}
+#page-loader-spin{
+	top: 50%; 
+  left: 50%;
+	margin: -50px 0 0 -50px;
+}
+
+/* [PAGE WRAPPER] */
+#page-wrap {
+	display: flex;
+	align-items: stretch;
+}
+
+/* [SIDE BAR] */
+#page-sidebar {
+	min-width: 250px;
+	max-width: 250px;
+	background: #353535;
+	color: #fff;
+	transition: all 0.3s;
+}
+
+/* [SIDE BAR ITEMS] */
+#page-sidebar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px;
+  display: block;
+  width: 100%;
+}
+#page-sidebar .ico {
+  font-size: 32px;
+  color: #f48042;
+}
+
+/* [PAGE MAIN] */
+#page-main {
+	width:100%;
+  min-height: 100vh;
+	background: #f7f9fa;
+}
+
+/* [NAVIGATION BAR] */
+#page-nav {
+  position: relative;
+	background: #474747;
+	color: #fff;
+  min-height: 50px;
+}
+#page-button-side, #page-button-out {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: #87260e;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+	cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+#page-button-side {
+  display: none;
+  left: 0;
+}
+#page-button-out {
+  right: 0;
+}
+
+/* [CONTENTS] */
+#page-contents {
+  padding: 10px;
+}
+
+/* [SHOW/HIDE THE SIDEBAR + CONTROL] */
+@media (max-width: 768px) {
+  #page-sidebar {
+    margin-left: -250px;
+  }
+  #page-sidebar.active {
+    margin-left: 0;
+  }
+  #page-button-side {
+    display: block;
+  }
+}
+
+/* [FORMS] */
+button, input[type=button], input[type=submit] {
+  background: #87260e;
+  border: 0;
+  color: #fff;
+}
+input[type=text], input[type=email], input[type=number], input[type=password], textarea{
+  display: block;
+}
+input, textarea, button{
+  box-sizing: border-box;
+  padding: 8px;
+  margin: 8px;
+}
+table.zebra {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.zebra td {
+  padding: 10px;
+}
+table.zebra td.right {
+  text-align: right;
+}
+table.zebra tr:nth-child(odd) {
+  background-color: #f2f2f2
+}
