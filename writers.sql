@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2019 at 01:24 AM
+-- Generation Time: Feb 21, 2019 at 03:17 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 5.6.37
 
@@ -51,7 +51,12 @@ INSERT INTO `accowners` (`id`, `username`, `password`, `fname`, `lname`, `idnumb
 (12, 'ii@gmail.com', '$2y$10$xygNtoxSJ63kZI9kRVgDU.X6.QZZAE.1eXdhd8GK5mj6FATg3DXsS', 'ian', 'kamau', 777, '999', '1972', 'Male', 'sergent', '', 'active'),
 (13, 'rty@iugf.com', '$2y$10$L5ZRFUJSa9EQ945ziYpHFuTZfcRo1IWnYlMKQ4BhDLWyl3pimNmMy', 'trew', 'trewrs', 3234, '43234', '432', 'Female', 'gfd', '', 'active'),
 (14, 'rrrr@gmail.com', '$2y$10$S0LPQjHGr1O5wzcb76jCgub.UapQfT1lSpZ985sIH/Em1W6LOgl/m', 'mhngbfv', 'jhgfd', 635852, '356855852', '63565', 'Male', 'oiuytrew', '', 'active'),
-(15, 'gg@gmail.com', '$2y$10$TKIYo6mQp5eUuOSM2djW3OCCuEvWpfe4zFEAActZGsgOu94i93Fo2', 'kamau', 'ndegwa', 8749347, '638387790', '1971', 'Male', 'sergent', '', 'active');
+(15, 'gg@gmail.com', '$2y$10$TKIYo6mQp5eUuOSM2djW3OCCuEvWpfe4zFEAActZGsgOu94i93Fo2', 'kamau', 'ndegwa', 8749347, '638387790', '1971', 'Male', 'sergent', '', 'active'),
+(16, 'warden@gmail.com', '$2y$10$mmiPq3zqHwB4eRWwSgRGg.14SN3NkH.7tqYjhGaynXeAcXjsExQrG', 'warden', 'kamau', 567890, '45678', '1988', 'Male', 'corporal', '', 'active'),
+(17, 'kanjih2012@gmail.com', '$2y$10$FK7GwE8n9nB/380YNvs5fu0ImSIe4Kk.G9ckBmxwshIfHvl3DYxt2', 'William', 'Mburu', 22273344, '159', '1979', '', 'Corporal', '', 'active'),
+(18, 'aaa@gmail.com', '$2y$10$PA3Kc4D/aVYDViAGvFVxXONviqZZ9J61612Ydb.LWRY9.pW1h1NMe', 'hfgds', 'gfdsasd', 5210652, '521965215', '56789', 'Male', 'rtfgyhjk', '', 'active'),
+(19, 'rare@gmail.com', '$2y$10$PUnDrNhA7tQrXgcPe5kPpuf1K77.KhhLEY3kqthr2xIW74ABcLFcC', 'zuka', 'berg', 43256, '2345678', '1999', 'Male', 'corporal', '', 'active'),
+(20, 'zukaberg@gmail.com', '$2y$10$0gFpYf0nZi7lODwfGj28Xu5miXiQrk4BfxdfKbyNVCYWYIlALqyH2', '', '', 0, '', '', '', '', '', 'active');
 
 -- --------------------------------------------------------
 
@@ -103,13 +108,9 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `username`, `email`, `phone`, `relationship`, `message`) VALUES
-(8, 'stephen kaguri', 'kaguris96@gmail.com', '0', '', 'fnj'),
-(9, 'stephen kaguri', 'kaguris96@gmail.com', '0', '', 'fjkk'),
-(10, 'ruben', 'ruben@mail.com', '0', '', 'qwertyuioplkjhgf1234567'),
-(11, 'trfedwse', 'ytreewq@tre.com', '0', 'relationship', 'hgfckhdc vhdbvkf vyfvfuv gfvfv f '),
-(12, 'trfedwse', 'ytreewq@tre.com', '0', 'relationship', 'hgfckhdc vhdbvkf vyfvfuv gfvfv f '),
-(13, 'reuben Kihiu', 'reubeenkihiu@gmail.com', 'phone', 'relationship', 'hey boy'),
-(14, 'reuben Kihiu', 'reubeenkihiu@gmail.com', 'phone', 'relationship', 'hey boy');
+(16, 'Njogu Kamau', 'kamau@gmail.com', '07252724', 'cousin', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'),
+(17, 'Njeri Wambui', 'wambui@gmail.com', '0736525472', 'Wife', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'),
+(18, 'Ndegwa Mwangi', 'githuka@gmail.com', '07465632145', 'Brother', 'Helo, How are you');
 
 -- --------------------------------------------------------
 
@@ -168,7 +169,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(4, 'kaguris96@gmail.com', '$2y$10$ygdpLp6jWuRgswmdBgzd1ut7gy/8z.WRdB8qLZMr3z1wrISIkWnHy');
+(4, 'reubeenkihiu@gmail.com', '$2y$10$ygdpLp6jWuRgswmdBgzd1ut7gy/8z.WRdB8qLZMr3z1wrISIkWnHy'),
+(5, 'reubenkihiu@gmail.com', 'reuby8212');
 
 -- --------------------------------------------------------
 
@@ -204,7 +206,10 @@ INSERT INTO `writers` (`id`, `username`, `password`, `fname`, `lname`, `idnumber
 (24, '', '', '', '', 0, '', '', '', 0, '0000-00-00', '', 'Active'),
 (25, '', '', '', '', 0, '', '', '', 0, '0000-00-00', '', 'Active'),
 (26, '', '', '', '', 0, '', '', '', 0, '0000-00-00', '', 'Active'),
-(27, 'kanjih2012@gmail.com', '', 'joe', 'job', 22446633, 'KAW6431D', '1979', 'Murder', 10000000, '2037-01-01', 'I.T', 'Active');
+(27, 'kanjih2012@gmail.com', '', 'joe', 'job', 22446633, 'KAW6431D', '1979', 'Murder', 10000000, '2037-01-01', 'I.T', 'Active'),
+(28, 'ndegwa@gmail.com', '', 'Ndegwa', 'Mwangi', 847393392, 'KJ7349', '1992', 'Theft', 24, '2021-02-12', 'MAsonry', 'Active'),
+(29, 'kimani@gmail.com', '', 'Muigai', 'Kimani', 96556565, 'KJ4449', '1983', 'Illegal Drugs', 36, '2022-06-22', 'MAsonry', 'Active'),
+(30, 'Inmate@gmail.com', '', 'Kamande', 'Njogu', 873528, 'KK5673', '1988', 'Robery', 24, '2021-02-02', 'I.T', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -256,7 +261,7 @@ ALTER TABLE `writers`
 -- AUTO_INCREMENT for table `accowners`
 --
 ALTER TABLE `accowners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `bids`
@@ -268,7 +273,7 @@ ALTER TABLE `bids`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -280,13 +285,13 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `writers`
 --
 ALTER TABLE `writers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
