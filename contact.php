@@ -81,12 +81,12 @@
 
                             <!-- Get A Quote -->
                             <div class="get-a-quote ml-4 mr-3">
-                                <a href="#" class="btn uza-btn">Call Us</a>
+                                <a href="telephone:+254 759 457 113" class="btn uza-btn"> <i class="fa fa-phone"></i> Call Us</a>
                             </div>
 
                             <!-- Login / Register -->
                             <div class="login-register-btn mx-3">
-                                <a href="signup/login.php">Login <span>/ Register</span></a>
+                                <a href="signup/signup.php">Login <span>/ Register</span></a>
                             </div>
 
                             <!-- Search Icon -->
@@ -142,7 +142,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control mb-30" name="name" placeholder=" Full Name">
+                                        <input type="text" class="form-control mb-30" name="name" placeholder="Name of Inmate">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -179,9 +179,10 @@
                         <!-- Single Sidebar Area -->
                         <div class="single-contact-card mb-50">
                             <h4>Contact Us</h4>
-                            <h3>+254 759 457 113</h3>
-                            <h6>kingongoprison@gmail.com</h6>
-                            <h6>Mon - Fri: 12:00 - 3:00 <br>Closed on Weekends</h6>
+                            <h4><a href="telephone:+254 759 457 113"> <i class="fa fa-phone"></i> +254 759 457 113</a></h4>
+                            <h6><a href="mailto:kingongoprison@gmail.com"><i class="fa fa-envelope"></i> kingongoprison@gmail.com </a></h6>
+                            <h6>Mon - Fri: 12:00 - 3:00 </h6>
+                            <h6>Closed on Weekends</h6>
                         </div>
 
                     </div>
@@ -208,8 +209,9 @@
 
                         <!-- Footer Content -->
                         <div class="footer-content mb-15">
-                            <h3>+254 759 457 113</h3>
-                            <p>Nyeri Nanyuki Road,<br>Nyeri, Kenya <br><a href="mailto:kingongoprison@gmail.com"> kingongoprison@gmail.com </a></p>
+                            <h4><a href="telephone:+254 759 457 113"> <i class="fa fa-phone"></i> +254 759 457 113</a></h4>
+                            <p>Nyeri Nanyuki Road,<br>Nyeri, Kenya</p>
+                            <a href="mailto:kingongoprison@gmail.com"> kingongoprison@gmail.com </a>
                         </div>
                         
                     </div>
@@ -219,7 +221,7 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-footer-widget mb-80">
                         <!-- Widget Title -->
-                        <h4 class="widget-title">Quick Link</h4>
+                        <h4 class="widget-title">Quick Links</h4>
 
                         <!-- Nav -->
                         <nav>
@@ -227,7 +229,7 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="contact.php">Write to Loved Ones</a></li>
                                 <li><a href="signup/signup.php">Warden Signup</a></li>
-                                <li><a href="signup/signup.php">warden Login</a></li>
+                                <li><a href="signup/login.php">warden Login</a></li>
                             </ul>
                         </nav>
                     </div>
