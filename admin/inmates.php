@@ -15,6 +15,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords" content="Pooled Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link rel="icon" href="../img/core-img/favicon.png">
+
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
@@ -79,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 
 				  <h3>Inmates</h3>
-				 <table id="table-max-height" class="max-height">
+				 <table id="table-max-height" class="max-height" style="overflow-y: auto;">
 					<thead>
 					  <tr>
 					  	<th>First Name</th>
@@ -88,8 +90,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 						<th>Inmate ID</th>
 						<th>YOB</th>
-						<th>Term Length</th>
 						<th>Crime</th>
+						<th>Term Length</th>
 						<th>Activity</th>
 						
 					  </tr>
@@ -133,6 +135,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					<?php } 
 
+
+
+
 					if (isset($_GET['jobid']))
                   	{
                   		 $getid=$_GET['jobid'];
@@ -159,6 +164,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					?>
 					  
 					</tbody>
+					
+
 				  </table>
 
 				  
@@ -166,8 +173,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								  
 				<!-- //tables -->
 			</div>
+			<div style="margin-top: 2%">
+				<?php
+					  	$conn = mysqli_connect('localhost','root','','writers') or die(mysql_error());
+					  	
+
+                  $s = "SELECT * FROM writers";
+                  $result =$conn->query($s);
+                  $count = $result->num_rows;
+                  echo $count. " Inmates";
+
+
+                  ?>
+			</div>
 			<div style="margin-top: 3%">
-				<a href="../Writer Signup/signup.php" class="btn btn-success">Register Inmates</a>
+				<a href="../Writer Signup/signup.php" class="btn btn-success" style="margin-bottom: 2%">Register Inmates</a>
 			</div>
 			
 
@@ -215,6 +235,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									 
 									
 									<li><a href="inmates.php"><i class="fa fa-table"></i>  <span>Inmates</span><div class="clearfix"></div></a></li>
+									<li><a href="messages.php"><i class="fa fa-envelope"></i>  <span>Messages</span><div class="clearfix"></div></a></li>
 									
 							        
 										 
