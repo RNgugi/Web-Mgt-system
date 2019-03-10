@@ -24,7 +24,7 @@ else
 
 if (isset($_POST['submit']))
   {
-$sql = "INSERT INTO contact (username,email,phone,relationship,message) VALUES ('$name','$email','phone','relationship','$message')";
+$sql = "INSERT INTO contact (username,email,phone,relationship,message) VALUES ('$name','$email','$phone','$relationship','$message')";
    
 //if submission was successful
   if ($conn->query($sql) === TRUE) {
