@@ -12,6 +12,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+            <link rel="icon" href="../img/core-img/favicon.png">
+
 
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
         <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
@@ -81,12 +83,22 @@
 
 
             <div class="form-group ">
-                <input type="text" placeholder="Crime" name="crime" class="form-control" >
+                <select type="text" placeholder="Crime" name="crime" class="form-control" > 
+                    <option value="" selected="selected" disabled="disabled">- Select Crime -</option>
+                   <option value="Theft">Theft</option>
+                  <option value="Murder">Murder</option>
+                  <option value="Robery">Robery</option>
+                  <option value="Assault">Assault</option>
+                  <option value="Sexual Assault">Sexual Assault</option>
+                  <option value="Illegal Drugs">Illegal Drugs</option>
+                  <option value="Traffic">Traffic</option>
+
+                </select>
             </div>
 
 
             <div class="form-group ">
-                <input type="text" placeholder="Term Length (Months)" name="termlength" class="form-control" 
+                <input type="text" placeholder="Term Length (Months)" name="termlength" class="form-control">
             </div>
 
 
@@ -96,7 +108,15 @@
 
 
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <input type="text" placeholder="Activities Assigned" name="activity" class="form-control" >
+                <select type="text" placeholder="Activities Assigned" name="activity" class="form-control" >
+                    <option value="" selected="selected" disabled="disabled">- Assign Activity -</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Masonry">Masonry</option>
+                    <option value="Agriculture">Agricultrure</option>
+                    <option value="Catering">Catering</option>
+                    <option value="I.T">I.T</option>
+                    <option value="Athletics">Athletics</option>
+                </select>
             </div>
 
 
@@ -104,11 +124,18 @@
 
 
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit" name="submit">
-                
+                <input type="submit" class="btn btn-primary" value="Submit" name="submit" style="margin-right: 25%;">
+
+                <a href="../admin/index.php" class="btn btn-success" role="button">Back Home</a>
+
             </div>
+            <div>
+            </div>
+
         </form>
+
     </div>
+
                 
 				
             </div>
