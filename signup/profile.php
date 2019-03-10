@@ -79,7 +79,7 @@ mysqli_close($conn);
 
                     <ul class="nav navbar-nav navbar-right">
                      
-                       <a href="../index.php" class="btn btn-success">Home</a>
+                       <a href="../index.html" class="btn btn-success">Home</a>
   <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
     <a href="index.php" class="btn btn-warning">Update Your Details</a>
 
