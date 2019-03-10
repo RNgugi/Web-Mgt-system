@@ -36,6 +36,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <meta name="keywords" content="Pooled Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link rel="icon" href="../img/core-img/favicon.png">
+
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
@@ -68,13 +71,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--four-grids here-->
 		<div class="four-grids">
 					<div class="col-md-3 four-grid">
-						<div class="four-agileits">
+						<div class="four-agileits" >
 							<div class="icon">
 								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
 							</div>
 							<div class="four-text">
 								<h3>Sentence Inmates</h3>
-                                <h4>  2,000 </h4>
+                                <h4> 6 </h4>
 								
 							</div>
 							
@@ -83,11 +86,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 four-grid">
 						<div class="four-agileinfo">
 							<div class="icon">
-								<i class="glyphicon glyphicon-list-alt" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
 							</div>
 							<div class="four-text">
 								<h3>Remand Inmates</h3>
-                                <h4>500</h4>
+                                <h4>4</h4>
 
 							</div>
 							
@@ -96,11 +99,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 four-grid">
 						<div class="four-w3ls">
 							<div class="icon">
-								<i class="glyphicon glyphicon-folder-open" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
 							</div>
 							<div class="four-text">
 								<h3>Total Inmates</h3>
-                                <h4>2,500</h4>
+                                <h4><?php
+					  	$conn = mysqli_connect('localhost','root','','writers') or die(mysql_error());
+					  	
+
+                  $s = "SELECT * FROM writers";
+                  $result =$conn->query($s);
+                  $count = $result->num_rows;
+                  echo $count. " ";
+
+
+                  ?></h4>
 								
 							</div>
 							
@@ -109,32 +122,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 four-grid">
 						<div class="four-wthree">
 							<div class="icon">
-								<i class="glyphicon glyphicon-briefcase" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-tower" aria-hidden="true"></i>
 							</div>
 							<div class="four-text">
 								<h3>Wardens</h3>
-                                <h4>200</h4>
+                                <h4><?php
+					  	$conn = mysqli_connect('localhost','root','','writers') or die(mysql_error());
+					  	
+
+                  $s = "SELECT * FROM accowners";
+                  $result =$conn->query($s);
+                  $count = $result->num_rows;
+                  echo $count. " ";
+
+
+                  ?></h4>
 								
 							</div>
 							
 						</div>
 					</div>
 					<div class="clearfix"></div>
-				</div>
+				</div> 
 <!--//four-grids here-->
 <!--photoday-section--> 
             
                         
-                        <div class="col-sm-4 wthree-crd" style="width: 80%; margin-bottom: 5%">
+                        <div class="col-sm-4 wthree-crd" style="width: 80%; margin-bottom: 5%; overflow-y: auto; height:350px; margin-top: 2%">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body" style="margin-bottom: 10%">
                                     <div class="widget widget-report-table">
                                         <header class="widget-header m-b-15">
                                         </header>
                                         
                                         <div class="row m-0 md-bg-grey-100 p-l-20 p-r-20">
                                             <div class="col-md-6 col-sm-6 col-xs-6 w3layouts-aug">
-                                                <h3>2nd August 2016</h3>
+                                                <h3>19/02/2019</h3>
                                                 <p>Wardens Schedule</p>
                                             </div>
                                             
@@ -215,8 +238,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 }
 					?>                                                    
                                                 </tbody>
-                                            </table>    
+
+                                            </table>
+                                            <div style="margin-top: 3%">
+				<a href="#" class="btn btn-success">Assign Duties</a>
+			</div>    
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -224,10 +252,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 
                         
                         <div class="clearfix"></div>
-                   <div style="margin-top: 3%">
-				<a href="../Writer Signup/signup.php" class="btn btn-success">Register Inmates</a>
-			</div>
-    <!--//photoday-section-->   
+                      <!--//photoday-section-->   
 	
 <!-- script-for sticky-nav -->
 		<script>
@@ -272,6 +297,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									 
 									
 									<li><a href="inmates.php"><i class="fa fa-table"></i>  <span>Inmates</span><div class="clearfix"></div></a></li>
+									<li><a href="messages.php"><i class="fa fa-envelope"></i>  <span>Messages</span><div class="clearfix"></div></a></li>
 									
 							        
 										 
